@@ -1,0 +1,81 @@
+// style.scss
+
+.container {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+  
+  .container::before { /*Bu kod, .container elementine bir ::before seçici ekler. ::before içeriğini arka plan resmi olarak ayarlar ve opaklık değeri ile arka plan resminin opaklığını kontrol eder. .box elementi bu yapı üzerine gelir ve .box'ın içeriği etkilenmez.*/
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('./signup.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1; // Arka planı container'ın arkasına yerleştirir
+  }
+  
+  .box {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 450px;
+    height: 500px;
+    border-radius: 10px;
+    padding: 50px;
+  }
+  
+  h1 {
+    color: white;
+    margin-bottom: 20px;
+  }
+  .sign-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    &:focus {
+      border: 3px solid rgb(2, 2, 173);
+    }
+  }
+  .uye{
+        cursor: pointer;
+        margin-bottom: 30px;
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 16px;
+        color: white;
+        background-color: red;
+        width: 100%;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: rgb(128, 128, 128);
+    }
+    .giris-yonlendir{
+      margin-top: 20px;
+      color: rgb(128, 128, 128);
+    }
+    .giris-yap {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: red;
+        cursor: pointer;
+      }
+    }

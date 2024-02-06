@@ -1,0 +1,12 @@
+.genres {
+    display: flex;
+    gap: 5px;
+    .genre {
+        background-color: var(--red);
+        padding: 5px;
+        font-size: 8px;
+        border-radius: 4px;
+        color: white;
+        white-space: nowrap; //içeriği bir satıra sığdır
+    }
+}
